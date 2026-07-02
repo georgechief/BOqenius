@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BOQenius UI/UX Proposal</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 :root {
   --brand:#063b24;--brand-deep:#042d1c;--brand-mid:#1f6b4c;--cream:#fbf8ee;--gold:#a8874e;
   --bg:#f4f4f1;--surface:#fff;--surface-2:#f0f1ee;--border:#dedfd9;--text:#252821;--muted:#6d7069;
-  --success:#2f805f;--warning:#b9833f;--error:#bd6257;--info:#7e8079;--shadow:0 14px 40px rgba(45,38,24,.10);
+  --success:#2f805f;--warning:#b9833f;--error:#bd6257;--info:#7e8079;--shadow:0 14px 40px rgba(45,38,24,.10);--font-heading:Inter,ui-sans-serif,sans-serif;--font-body:Inter,ui-sans-serif,sans-serif;
 }
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--bg)}button,input,select{font:inherit}button{cursor:pointer}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:var(--font-body);color:var(--text);background:var(--bg)}button,input,select{font:inherit}h1,h2,h3,h4,.page-title,.version-card h2,.selection-intro h2,.login-brand h1,.login-form h2{font-family:var(--font-heading)}button{cursor:pointer}
 .screen{display:none;min-height:100vh}.screen.active{display:block}
 /* Login */
 #loginScreen{background:radial-gradient(circle at 12% 18%,rgba(168,135,78,.14),transparent 28%),linear-gradient(120deg,#f5f0e3,#fbfaf6 55%,#f1f1eb);padding:5vh 4vw}
@@ -64,6 +65,21 @@
 .theme-v1{--demo-sidebar:linear-gradient(180deg,#042d1c,#063b24);--demo-sidebar-text:#fff;--demo-sidebar-border:rgba(255,255,255,.11);--demo-logo-border:rgba(216,199,157,.55);--demo-chip:rgba(255,255,255,.08);--demo-hover:rgba(255,255,255,.08);--demo-hover-text:#fff;--demo-active:rgba(255,255,255,.12);--demo-active-text:#fff;--demo-primary:#063b24;--demo-accent:#a68a52;--demo-accent-soft:#f5eddc;--demo-welcome:linear-gradient(120deg,#fff,#fbf8ee);--demo-profile-gradient:linear-gradient(110deg,#063b24,#12623d);--demo-avatar-bg:#e8f2ec;--demo-avatar-text:#063b24;--demo-progress:linear-gradient(90deg,#12623d,#a68a52);--demo-bar:linear-gradient(180deg,#12623d,#063b24);--demo-bar-secondary:linear-gradient(180deg,#7f9a88,#2f805f);--demo-table-head:#f0f2ee;--demo-row-hover:#f8faf7;--demo-row-selected:#edf6f0;--demo-kpi-accent:#12623d;--demo-kpi-2:#a68a52;--demo-kpi-3:#7f9a88;--demo-kpi-4:#c78828;--demo-kpi-5:#3e6fa8;--demo-line-a:#12623d;--demo-line-b:#a68a52}
 .theme-v2{--demo-sidebar:linear-gradient(180deg,#f3f5f4,#e8ecea);--demo-sidebar-text:#354039;--demo-sidebar-border:#d6dcda;--demo-logo-border:#aeb9b3;--demo-chip:#fff;--demo-hover:#fff;--demo-hover-text:#1f2933;--demo-active:#dfe9e4;--demo-active-text:#1f5a44;--demo-primary:#527fb7;--demo-accent:#c9785f;--demo-accent-soft:#f8ece7;--demo-welcome:linear-gradient(120deg,#fff,#eaf1f8,#fbf7ee);--demo-profile-gradient:linear-gradient(110deg,#527fb7,#806b9b);--demo-avatar-bg:#eaf4ef;--demo-avatar-text:#1f5a44;--demo-progress:linear-gradient(90deg,#527fb7,#4d9a94);--demo-bar:linear-gradient(180deg,#806b9b,#a28db7);--demo-bar-secondary:linear-gradient(180deg,#4d9a94,#6bb2ad);--demo-table-head:#eef1f3;--demo-row-hover:#f8fafb;--demo-row-selected:#edf3f9;--demo-kpi-accent:#527fb7;--demo-kpi-2:#4d9a94;--demo-kpi-3:#cf9a42;--demo-kpi-4:#c9785f;--demo-kpi-5:#806b9b;--demo-line-a:#527fb7;--demo-line-b:#c9785f}
 .theme-v3{--demo-sidebar:linear-gradient(180deg,#2d7658,#1f6b4c 55%,#195d42);--demo-sidebar-text:#fff;--demo-sidebar-border:rgba(255,255,255,.12);--demo-logo-border:rgba(223,207,170,.55);--demo-chip:rgba(255,255,255,.08);--demo-hover:#0d4a35;--demo-hover-text:#fff;--demo-active:#0f5139;--demo-active-text:#fff;--demo-primary:#176044;--demo-accent:#a8874e;--demo-accent-soft:#f5ecd9;--demo-welcome:linear-gradient(120deg,#fff,#f7f2e8,#fbf8f0);--demo-profile-gradient:linear-gradient(110deg,#a8874e,#8b6a4b);--demo-avatar-bg:#e8f2ed;--demo-avatar-text:#176044;--demo-progress:linear-gradient(90deg,#a8874e,#8b6a4b);--demo-bar:linear-gradient(180deg,#a8874e,#8b6a4b);--demo-bar-secondary:linear-gradient(180deg,#7f9a88,#2f7a5a);--demo-table-head:#efeee9;--demo-row-hover:#faf9f5;--demo-row-selected:#f6f0e4;--demo-kpi-accent:#a8874e;--demo-kpi-2:#8b6a4b;--demo-kpi-3:#7e8079;--demo-kpi-4:#7f9a88;--demo-kpi-5:#d9c8a3;--demo-line-a:#a8874e;--demo-line-b:#8b6a4b}
+
+.font-options{padding:14px;background:#faf9f6;border:1px solid var(--border);border-radius:12px;margin-bottom:16px}
+.font-options h4{margin:0 0 9px;font-size:12px}
+.font-choice{width:100%;border:1px solid transparent;background:transparent;border-radius:9px;padding:8px 9px;text-align:left;display:flex;align-items:center;justify-content:space-between;color:var(--text);transition:.18s}
+.font-choice small{color:var(--muted);font-size:9px}
+.font-choice:hover{background:#fff;border-color:var(--border)}
+.font-choice.active{background:#fff;border-color:#bca16a;box-shadow:0 3px 10px rgba(45,38,24,.06)}
+.demo-font-switcher{margin:10px 6px 16px}
+.demo-font-switcher label{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.9px;opacity:.62;margin-bottom:6px}
+.demo-font-switcher select{width:100%;height:34px;border-radius:9px;border:1px solid var(--demo-sidebar-border);background:var(--demo-chip);color:inherit;padding:0 8px;font-size:10px}
+.theme-v4{--bg:#071126;--surface:#0d1f46;--surface-2:#122750;--border:#203967;--text:#eef5ff;--muted:#91a6cb;--shadow:0 16px 48px rgba(0,0,0,.38);--demo-sidebar:linear-gradient(180deg,#050d21,#08132f);--demo-sidebar-text:#eef5ff;--demo-sidebar-border:rgba(80,131,255,.22);--demo-logo-border:rgba(23,200,227,.42);--demo-chip:#0d1f46;--demo-hover:#102a59;--demo-hover-text:#fff;--demo-active:#1768ff;--demo-active-text:#fff;--demo-primary:#1768ff;--demo-accent:#17c8e3;--demo-accent-soft:rgba(23,200,227,.14);--demo-welcome:linear-gradient(120deg,#0d1f46,#10285a);--demo-profile-gradient:linear-gradient(110deg,#1768ff,#7c4dff);--demo-avatar-bg:#143263;--demo-avatar-text:#7eecff;--demo-progress:linear-gradient(90deg,#1768ff,#17c8e3);--demo-bar:linear-gradient(180deg,#1768ff,#17c8e3);--demo-bar-secondary:linear-gradient(180deg,#7c4dff,#ef4d9a);--demo-table-head:#10244d;--demo-row-hover:#112956;--demo-row-selected:#16366f;--demo-kpi-accent:#1768ff;--demo-kpi-2:#17c8e3;--demo-kpi-3:#7c4dff;--demo-kpi-4:#ef4d9a;--demo-kpi-5:#f7b733;--demo-line-a:#17c8e3;--demo-line-b:#7c4dff}
+.theme-v4 .demo-main{background:#071126}.theme-v4 .panel-card,.theme-v4 .kpi,.theme-v4 .mini-btn,.theme-v4 .toolbar input,.theme-v4 .toolbar select,.theme-v4 .tabbar{background:#0d1f46;color:#eef5ff;border-color:#203967}.theme-v4 tbody td{border-color:#19325c}.theme-v4 .status.neutral{background:#132b58}.theme-v4 .thumb{background:#10244d}.theme-v4 .demo-head h1,.theme-v4 .demo-head p{color:#eef5ff}
+.theme-v5{--bg:#f5f6f8;--surface:#fff;--surface-2:#f2f3f6;--border:#e0e3e9;--text:#292d35;--muted:#737985;--demo-sidebar:linear-gradient(180deg,#5b3fd6,#4334a8);--demo-sidebar-text:#fff;--demo-sidebar-border:rgba(255,255,255,.16);--demo-logo-border:rgba(255,255,255,.36);--demo-chip:rgba(255,255,255,.12);--demo-hover:rgba(255,255,255,.14);--demo-hover-text:#fff;--demo-active:#fff;--demo-active-text:#5b3fd6;--demo-primary:#6847e8;--demo-accent:#f44b91;--demo-accent-soft:#fde9f2;--demo-welcome:linear-gradient(120deg,#fff,#f4efff,#eef8ff);--demo-profile-gradient:linear-gradient(110deg,#6847e8,#1597e5);--demo-avatar-bg:#eee9ff;--demo-avatar-text:#5b3fd6;--demo-progress:linear-gradient(90deg,#6847e8,#1597e5);--demo-bar:linear-gradient(180deg,#6847e8,#8f6fff);--demo-bar-secondary:linear-gradient(180deg,#1597e5,#16b8c4);--demo-table-head:#f4f5f8;--demo-row-hover:#fafafe;--demo-row-selected:#f1edff;--demo-kpi-accent:#6847e8;--demo-kpi-2:#1597e5;--demo-kpi-3:#16b8c4;--demo-kpi-4:#f44b91;--demo-kpi-5:#2fa66a;--demo-line-a:#6847e8;--demo-line-b:#1597e5}
+.theme-v5 .demo-main{background:#f5f6f8}
+
 @media(max-width:1100px){.versions-grid{grid-template-columns:1fr}.login-shell{grid-template-columns:1fr}.login-brand{display:none}.demo-shell{grid-template-columns:78px 1fr}.demo-logo b,.demo-logo small,.version-chip,.demo-nav-item{font-size:0}.demo-nav-item span{font-size:16px}.demo-nav-item{justify-content:center}.two-col,.three-col,.crm-grid{grid-template-columns:1fr}.kpi-grid,.kpi-grid.five{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){#selectionScreen{padding:18px}.selection-head h1{display:none}.selection-intro h2{font-size:30px}.demo-page{padding:14px}.demo-head{align-items:flex-start;flex-direction:column}.demo-actions{margin-left:0;flex-wrap:wrap}.metric-row{grid-template-columns:1fr}.kpi-grid,.kpi-grid.five{grid-template-columns:1fr}.toolbar input{min-width:100%}}
 @media print{body *{visibility:hidden}#guidelinesModal.show,#guidelinesModal.show *{visibility:visible}#guidelinesModal{position:absolute;inset:0;background:#fff;padding:0}.guidelines-box{width:100%;max-height:none;box-shadow:none}.guidelines-head{display:none}.guidelines-content{max-height:none;overflow:visible}}
@@ -92,7 +108,7 @@
 
 <section id="selectionScreen" class="screen">
   <div class="selection-head"><div class="selection-brand"><span class="mark">BQ</span><div><b>BOQenius</b><small>UI/UX Proposal</small></div></div><h1>Design direction comparison</h1><button class="logout" id="logoutBtn">Log out</button></div>
-  <div class="selection-intro"><h2>Select a visual direction</h2><p>Each option contains the same five interactive BOQenius screens. The difference is the colour system, navigation treatment and dashboard accent logic.</p></div>
+  <div class="selection-intro"><h2>Select a visual direction</h2><p>Each of the five options contains the same five interactive BOQenius screens and three typography choices. The difference is the colour system, navigation treatment and dashboard accent logic.</p></div>
   <div class="versions-grid">
     <article class="version-card" data-version="v1">
       <div class="version-top">
@@ -106,7 +122,14 @@
         <h4>Included demo screens</h4>
         <ol><li>Activity Dashboard</li><li>Product Search</li><li>Online Services</li><li>Purchase Order Dashboard</li><li>CRM Sales Command Centre</li></ol>
       </div>
-      <div class="card-actions">
+      
+      <div class="font-options" data-font-group="v1">
+        <h4>Typography</h4>
+        <button class="font-choice active" data-font="current"><b>Current</b><small>Inter / Inter</small></button>
+        <button class="font-choice" data-font="editorial"><b>Editorial</b><small>Manrope / Source Sans 3</small></button>
+        <button class="font-choice" data-font="modern"><b>Modern</b><small>Space Grotesk / DM Sans</small></button>
+      </div>
+<div class="card-actions">
         <button class="btn primary" data-open-demo="v1">Preview demo</button>
         <button class="btn secondary" data-open-guidelines="v1">View UX/UI guidelines</button>
       </div>
@@ -124,7 +147,14 @@
         <h4>Included demo screens</h4>
         <ol><li>Activity Dashboard</li><li>Product Search</li><li>Online Services</li><li>Purchase Order Dashboard</li><li>CRM Sales Command Centre</li></ol>
       </div>
-      <div class="card-actions">
+      
+      <div class="font-options" data-font-group="v2">
+        <h4>Typography</h4>
+        <button class="font-choice active" data-font="current"><b>Current</b><small>Inter / Inter</small></button>
+        <button class="font-choice" data-font="editorial"><b>Editorial</b><small>Manrope / Source Sans 3</small></button>
+        <button class="font-choice" data-font="modern"><b>Modern</b><small>Space Grotesk / DM Sans</small></button>
+      </div>
+<div class="card-actions">
         <button class="btn primary" data-open-demo="v2">Preview demo</button>
         <button class="btn secondary" data-open-guidelines="v2">View UX/UI guidelines</button>
       </div>
@@ -142,11 +172,61 @@
         <h4>Included demo screens</h4>
         <ol><li>Activity Dashboard</li><li>Product Search</li><li>Online Services</li><li>Purchase Order Dashboard</li><li>CRM Sales Command Centre</li></ol>
       </div>
-      <div class="card-actions">
+      
+      <div class="font-options" data-font-group="v3">
+        <h4>Typography</h4>
+        <button class="font-choice active" data-font="current"><b>Current</b><small>Inter / Inter</small></button>
+        <button class="font-choice" data-font="editorial"><b>Editorial</b><small>Manrope / Source Sans 3</small></button>
+        <button class="font-choice" data-font="modern"><b>Modern</b><small>Space Grotesk / DM Sans</small></button>
+      </div>
+<div class="card-actions">
         <button class="btn primary" data-open-demo="v3">Preview demo</button>
         <button class="btn secondary" data-open-guidelines="v3">View UX/UI guidelines</button>
       </div>
     </article>
+    <article class="version-card" data-version="v4">
+      <div class="version-top"><span class="version-tag">Version 4</span></div>
+      <h2>Midnight SaaS</h2>
+      <p>Dark analytics-led interface with midnight navy surfaces and electric blue, cyan, violet and magenta accents.</p>
+      <div class="palette">
+        <div class="swatch"><span style="background:#08132F"></span><small>Midnight<br><code>#08132F</code></small></div>
+        <div class="swatch"><span style="background:#0D1F46"></span><small>Panel Navy<br><code>#0D1F46</code></small></div>
+        <div class="swatch"><span style="background:#1768FF"></span><small>Electric Blue<br><code>#1768FF</code></small></div>
+        <div class="swatch"><span style="background:#17C8E3"></span><small>Cyan<br><code>#17C8E3</code></small></div>
+        <div class="swatch"><span style="background:#7C4DFF"></span><small>Violet<br><code>#7C4DFF</code></small></div>
+        <div class="swatch"><span style="background:#EF4D9A"></span><small>Magenta<br><code>#EF4D9A</code></small></div>
+      </div>
+      <div class="screen-list"><h4>Included demo screens</h4><ol><li>Activity Dashboard</li><li>Product Search</li><li>Online Services</li><li>Purchase Order Dashboard</li><li>CRM Sales Command Centre</li></ol></div>
+      <div class="font-options" data-font-group="v4">
+        <h4>Typography</h4>
+        <button class="font-choice active" data-font="current"><b>Current</b><small>Inter / Inter</small></button>
+        <button class="font-choice" data-font="editorial"><b>Editorial</b><small>Manrope / Source Sans 3</small></button>
+        <button class="font-choice" data-font="modern"><b>Modern</b><small>Space Grotesk / DM Sans</small></button>
+      </div>
+      <div class="card-actions"><button class="btn primary" data-open-demo="v4">Preview demo</button><button class="btn secondary" data-open-guidelines="v4">View UX/UI guidelines</button></div>
+    </article>
+    <article class="version-card" data-version="v5">
+      <div class="version-top"><span class="version-tag">Version 5</span></div>
+      <h2>ClickUp-inspired workspace</h2>
+      <p>Bright collaborative interface with purple navigation, crisp white surfaces and colourful functional labels.</p>
+      <div class="palette">
+        <div class="swatch"><span style="background:#5B3FD6"></span><small>Purple<br><code>#5B3FD6</code></small></div>
+        <div class="swatch"><span style="background:#7B61FF"></span><small>Lavender<br><code>#7B61FF</code></small></div>
+        <div class="swatch"><span style="background:#1597E5"></span><small>Blue<br><code>#1597E5</code></small></div>
+        <div class="swatch"><span style="background:#16B8C4"></span><small>Cyan<br><code>#16B8C4</code></small></div>
+        <div class="swatch"><span style="background:#F44B91"></span><small>Pink<br><code>#F44B91</code></small></div>
+        <div class="swatch"><span style="background:#2FA66A"></span><small>Green<br><code>#2FA66A</code></small></div>
+      </div>
+      <div class="screen-list"><h4>Included demo screens</h4><ol><li>Activity Dashboard</li><li>Product Search</li><li>Online Services</li><li>Purchase Order Dashboard</li><li>CRM Sales Command Centre</li></ol></div>
+      <div class="font-options" data-font-group="v5">
+        <h4>Typography</h4>
+        <button class="font-choice active" data-font="current"><b>Current</b><small>Inter / Inter</small></button>
+        <button class="font-choice" data-font="editorial"><b>Editorial</b><small>Manrope / Source Sans 3</small></button>
+        <button class="font-choice" data-font="modern"><b>Modern</b><small>Space Grotesk / DM Sans</small></button>
+      </div>
+      <div class="card-actions"><button class="btn primary" data-open-demo="v5">Preview demo</button><button class="btn secondary" data-open-guidelines="v5">View UX/UI guidelines</button></div>
+    </article>
+
     </div>
 </section>
 
@@ -155,6 +235,14 @@
     <aside class="demo-sidebar">
       <div class="demo-logo"><span class="mark">BQ</span><div><b>BOQenius</b><small>by AH International</small></div></div>
       <div class="version-chip" id="versionChip">Version 3 · Balanced AHI hybrid</div>
+      <div class="demo-font-switcher">
+        <label for="demoFontSelect">Typography</label>
+        <select id="demoFontSelect">
+          <option value="current">Current · Inter</option>
+          <option value="editorial">Manrope + Source Sans 3</option>
+          <option value="modern">Space Grotesk + DM Sans</option>
+        </select>
+      </div>
       <nav class="demo-nav"><button class="demo-nav-item active" data-page-target="activity"><span>⌂</span>Activity Dashboard</button><button class="demo-nav-item " data-page-target="products"><span>⌕</span>Product Search</button><button class="demo-nav-item " data-page-target="online"><span>▦</span>Online Services</button><button class="demo-nav-item " data-page-target="purchase"><span>◒</span>Purchase Order Dashboard</button><button class="demo-nav-item " data-page-target="crm"><span>◈</span>CRM Sales Command Centre</button></nav>
       <div class="demo-sidebar-actions"><button id="backToVersions">← Back to versions</button><button id="openCurrentGuidelines">UX/UI guidelines</button></div>
     </aside>
@@ -228,9 +316,15 @@
 
 <script>
 const PASSWORD='boqenius2026';
-const guidelines={"v1": "\n<h2>Version 1 \u2014 UX/UI Definition</h2>\n<p class=\"lead\">Brand-led enterprise interface with a dark AHI navigation frame and neutral working canvas.</p>\n<h3>Design principles</h3>\n<ul><li>Use AHI green as the strongest structural brand element.</li><li>Keep the main workspace neutral and highly legible.</li><li>Use gold sparingly for premium emphasis and active navigation.</li><li>Reserve semantic colours for status and alerts.</li></ul>\n<h3>Navigation</h3>\n<p>Sidebar uses Deep Green <code>#042D1C</code> to Brand Green <code>#063B24</code>. Active items use a subtle translucent surface with a 3px gold indicator. Hover states lighten slightly.</p>\n<h3>Cards & surfaces</h3>\n<p>Cards use white backgrounds, 1px stone borders, 12\u201314px radius and minimal shadow. Avoid full-colour KPI cards unless the state is critical.</p>\n<h3>Tables</h3>\n<p>Use neutral rows, subtle dividers and light headers. Status should be communicated using compact badges, not full-row fills.</p>\n<h3>Buttons</h3>\n<p>One primary green action per view. Secondary actions use white surfaces with borders. Destructive actions remain visually separate.</p>\n<h3>Charts</h3>\n<p>Primary chart series use AHI green, sage and gold. Red is used only for risk or failure.</p>\n", "v2": "\n<h2>Version 2 \u2014 UX/UI Definition</h2>\n<p class=\"lead\">A contemporary analytical interface using a broader complementary palette and a lighter visual frame.</p>\n<h3>Design principles</h3>\n<ul><li>Reduce the visual dominance of dark green.</li><li>Use complementary colours to distinguish analytical categories.</li><li>Maintain a highly neutral background to support colour clarity.</li><li>Keep navigation visually quieter than the content.</li></ul>\n<h3>Navigation</h3>\n<p>Sidebar uses a light grey-green surface. Active navigation receives a muted green background with a terracotta indicator.</p>\n<h3>Cards & surfaces</h3>\n<p>Cards remain white with blue-grey borders. KPI icon tiles rotate through blue, teal, amber and plum soft fills.</p>\n<h3>Tables</h3>\n<p>Headers use blue-grey neutrals. Selected rows use a subtle blue tint. Semantic badges retain clear colour coding.</p>\n<h3>Buttons</h3>\n<p>Primary actions use medium green rather than deep green. Secondary actions remain neutral.</p>\n<h3>Charts</h3>\n<p>Use blue, teal, plum, terracotta and amber to differentiate datasets. Avoid more than four simultaneous series.</p>\n", "v3": "\n<h2>Version 3 \u2014 UX/UI Definition</h2>\n<p class=\"lead\">Balanced AHI expression combining a recognisable green brand frame with warmer, more premium dashboard accents.</p>\n<h3>Design principles</h3>\n<ul><li>Keep AHI visible through the sidebar and primary actions.</li><li>Use a lighter brand green for the default navigation state.</li><li>Darken navigation items on hover and active states.</li><li>Use gold, warm brown, sand and stone across dashboards and data visuals.</li></ul>\n<h3>Navigation</h3>\n<p>Sidebar default uses Green <code>#1F6B4C</code>. Hover and active items shift to Deep Green <code>#0D4A35</code>. Gold is used for the active indicator.</p>\n<h3>Cards & surfaces</h3>\n<p>Cards are white or very lightly warm-toned. Gold, brown, stone and sage are used for KPI icon tiles and data accents.</p>\n<h3>Tables</h3>\n<p>Headers use warm stone grey. Selected rows use pale sand. Status badges remain compact and semantically clear.</p>\n<h3>Buttons</h3>\n<p>Primary actions use medium brand green. Gold may be used only for secondary premium emphasis, never for destructive actions.</p>\n<h3>Charts</h3>\n<p>Primary series use gold and warm brown; secondary series use sage and stone. Red remains reserved for risk.</p>\n"};
-const versionNames={v1:'Version 1 · Brand-led dark navigation',v2:'Version 2 · Expanded complementary palette',v3:'Version 3 · Balanced AHI hybrid'};
+const guidelines={"v1": "\n<h2>Version 1 \u2014 UX/UI Definition</h2>\n<p class=\"lead\">Brand-led enterprise interface with a dark AHI navigation frame and neutral working canvas.</p>\n<h3>Design principles</h3>\n<ul><li>Use AHI green as the strongest structural brand element.</li><li>Keep the main workspace neutral and highly legible.</li><li>Use gold sparingly for premium emphasis and active navigation.</li><li>Reserve semantic colours for status and alerts.</li></ul>\n<h3>Navigation</h3>\n<p>Sidebar uses Deep Green <code>#042D1C</code> to Brand Green <code>#063B24</code>. Active items use a subtle translucent surface with a 3px gold indicator. Hover states lighten slightly.</p>\n<h3>Cards & surfaces</h3>\n<p>Cards use white backgrounds, 1px stone borders, 12\u201314px radius and minimal shadow. Avoid full-colour KPI cards unless the state is critical.</p>\n<h3>Tables</h3>\n<p>Use neutral rows, subtle dividers and light headers. Status should be communicated using compact badges, not full-row fills.</p>\n<h3>Buttons</h3>\n<p>One primary green action per view. Secondary actions use white surfaces with borders. Destructive actions remain visually separate.</p>\n<h3>Charts</h3>\n<p>Primary chart series use AHI green, sage and gold. Red is used only for risk or failure.</p>\n<h3>Typography options</h3><p>Current: Inter. Alternative A: Manrope + Source Sans 3. Alternative B: Space Grotesk + DM Sans.</p>", "v2": "\n<h2>Version 2 \u2014 UX/UI Definition</h2>\n<p class=\"lead\">A contemporary analytical interface using a broader complementary palette and a lighter visual frame.</p>\n<h3>Design principles</h3>\n<ul><li>Reduce the visual dominance of dark green.</li><li>Use complementary colours to distinguish analytical categories.</li><li>Maintain a highly neutral background to support colour clarity.</li><li>Keep navigation visually quieter than the content.</li></ul>\n<h3>Navigation</h3>\n<p>Sidebar uses a light grey-green surface. Active navigation receives a muted green background with a terracotta indicator.</p>\n<h3>Cards & surfaces</h3>\n<p>Cards remain white with blue-grey borders. KPI icon tiles rotate through blue, teal, amber and plum soft fills.</p>\n<h3>Tables</h3>\n<p>Headers use blue-grey neutrals. Selected rows use a subtle blue tint. Semantic badges retain clear colour coding.</p>\n<h3>Buttons</h3>\n<p>Primary actions use medium green rather than deep green. Secondary actions remain neutral.</p>\n<h3>Charts</h3>\n<p>Use blue, teal, plum, terracotta and amber to differentiate datasets. Avoid more than four simultaneous series.</p>\n<h3>Typography options</h3><p>Current: Inter. Alternative A: Manrope + Source Sans 3. Alternative B: Space Grotesk + DM Sans.</p>", "v3": "\n<h2>Version 3 \u2014 UX/UI Definition</h2>\n<p class=\"lead\">Balanced AHI expression combining a recognisable green brand frame with warmer, more premium dashboard accents.</p>\n<h3>Design principles</h3>\n<ul><li>Keep AHI visible through the sidebar and primary actions.</li><li>Use a lighter brand green for the default navigation state.</li><li>Darken navigation items on hover and active states.</li><li>Use gold, warm brown, sand and stone across dashboards and data visuals.</li></ul>\n<h3>Navigation</h3>\n<p>Sidebar default uses Green <code>#1F6B4C</code>. Hover and active items shift to Deep Green <code>#0D4A35</code>. Gold is used for the active indicator.</p>\n<h3>Cards & surfaces</h3>\n<p>Cards are white or very lightly warm-toned. Gold, brown, stone and sage are used for KPI icon tiles and data accents.</p>\n<h3>Tables</h3>\n<p>Headers use warm stone grey. Selected rows use pale sand. Status badges remain compact and semantically clear.</p>\n<h3>Buttons</h3>\n<p>Primary actions use medium brand green. Gold may be used only for secondary premium emphasis, never for destructive actions.</p>\n<h3>Charts</h3>\n<p>Primary series use gold and warm brown; secondary series use sage and stone. Red remains reserved for risk.</p>\n<h3>Typography options</h3><p>Current: Inter. Alternative A: Manrope + Source Sans 3. Alternative B: Space Grotesk + DM Sans.</p>", "v4": "\n<h2>Version 4 \u2014 UX/UI Definition</h2>\n<p class=\"lead\">Dark, high-contrast SaaS interface inspired by contemporary analytics products.</p>\n<h3>Design principles</h3>\n<ul><li>Use near-black navy as the primary canvas.</li><li>Use electric blue and cyan for actions and data emphasis.</li><li>Support analytics with restrained violet and magenta accents.</li><li>Maintain strong contrast and generous spacing.</li></ul>\n<h3>Navigation</h3>\n<p>Sidebar uses Midnight Navy <code>#08132F</code>. Active items use Electric Blue <code>#1768FF</code>; hover states use a lighter navy surface.</p>\n<h3>Cards & surfaces</h3>\n<p>Cards use layered navy surfaces with subtle blue borders. Separation comes from tone and soft glow rather than heavy shadows.</p>\n<h3>Tables</h3>\n<p>Headers use a darker navy band. Hover and selection use translucent blue fills. Bright semantic colours are reserved for status.</p>\n<h3>Buttons</h3>\n<p>Primary actions use electric blue. Secondary actions use transparent navy surfaces with cool borders.</p>\n<h3>Charts</h3>\n<p>Use blue, cyan, violet and magenta series. Avoid bright colours for decoration.</p>\n<h3>Typography options</h3>\n<p>Current: Inter. Alternative A: Manrope + Source Sans 3. Alternative B: Space Grotesk + DM Sans.</p>\n", "v5": "\n<h2>Version 5 \u2014 UX/UI Definition</h2>\n<p class=\"lead\">Bright collaborative workspace inspired by modern task-management platforms.</p>\n<h3>Design principles</h3>\n<ul><li>Use a bright white workspace and soft grey structure.</li><li>Use purple as the main interaction colour.</li><li>Use blue, pink, cyan and green as functional accents.</li><li>Keep density high but hierarchy clear.</li></ul>\n<h3>Navigation</h3>\n<p>Sidebar uses a purple-to-indigo gradient. Active items use a white or soft lavender surface.</p>\n<h3>Cards & surfaces</h3>\n<p>Cards are crisp white with cool grey borders and minimal shadow. Colour appears in labels, tabs and progress indicators.</p>\n<h3>Tables</h3>\n<p>Use white rows, subtle horizontal rules and colour-coded labels. Selected rows use pale lavender.</p>\n<h3>Buttons</h3>\n<p>Primary actions use vivid purple. Secondary actions remain white or pale lavender.</p>\n<h3>Charts</h3>\n<p>Use purple, blue, cyan, pink and green with consistent semantics.</p>\n<h3>Typography options</h3>\n<p>Current: Inter. Alternative A: Manrope + Source Sans 3. Alternative B: Space Grotesk + DM Sans.</p>\n"};
+const versionNames={v1:'Version 1 · Brand-led dark navigation',v2:'Version 2 · Expanded complementary palette',v3:'Version 3 · Balanced AHI hybrid',v4:'Version 4 · Midnight SaaS',v5:'Version 5 · ClickUp-inspired workspace'};
+const fontSets={
+  current:{label:'Current',cssHeading:"Inter, ui-sans-serif, sans-serif",cssBody:"Inter, ui-sans-serif, sans-serif"},
+  editorial:{label:'Manrope + Source Sans 3',cssHeading:"Manrope, ui-sans-serif, sans-serif",cssBody:"'Source Sans 3', ui-sans-serif, sans-serif"},
+  modern:{label:'Space Grotesk + DM Sans',cssHeading:"'Space Grotesk', ui-sans-serif, sans-serif",cssBody:"'DM Sans', ui-sans-serif, sans-serif"}
+};
 let currentVersion='v3';
+let currentFontSet='current';
 const screens={login:document.getElementById('loginScreen'),selection:document.getElementById('selectionScreen'),demo:document.getElementById('demoScreen')};
 function showScreen(name){Object.values(screens).forEach(s=>s.classList.remove('active'));screens[name].classList.add('active');window.scrollTo(0,0)}
 function login(){const input=document.getElementById('passwordInput');if(input.value===PASSWORD){sessionStorage.setItem('boqenius-auth','1');document.getElementById('loginError').classList.remove('show');showScreen('selection')}else{document.getElementById('loginError').classList.add('show')}}
@@ -238,7 +332,33 @@ document.getElementById('loginBtn').addEventListener('click',login);document.get
 document.getElementById('logoutBtn').addEventListener('click',()=>{sessionStorage.removeItem('boqenius-auth');document.getElementById('passwordInput').value='';showScreen('login')});
 if(sessionStorage.getItem('boqenius-auth')==='1')showScreen('selection');
 
-function openDemo(version){currentVersion=version;const shell=document.getElementById('demoShell');shell.className='demo-shell theme-'+version;document.getElementById('versionChip').textContent=versionNames[version];showPage('activity');showScreen('demo')}
+function applyFontSet(name){
+  currentFontSet=name;
+  const set=fontSets[name];
+  document.documentElement.style.setProperty('--font-heading',set.cssHeading);
+  document.documentElement.style.setProperty('--font-body',set.cssBody);
+  const select=document.getElementById('demoFontSelect');if(select)select.value=name;
+}
+function selectedFontForVersion(version){
+  const active=document.querySelector(`.font-options[data-font-group="${version}"] .font-choice.active`);
+  return active?active.dataset.font:'current';
+}
+function openDemo(version){
+  currentVersion=version;
+  currentFontSet=selectedFontForVersion(version);
+  applyFontSet(currentFontSet);
+  const shell=document.getElementById('demoShell');
+  shell.className='demo-shell theme-'+version;
+  document.getElementById('versionChip').textContent=versionNames[version];
+  showPage('activity');
+  showScreen('demo');
+}
+document.querySelectorAll('.font-choice').forEach(btn=>btn.addEventListener('click',()=>{
+  const group=btn.closest('.font-options');
+  group.querySelectorAll('.font-choice').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}));
+document.getElementById('demoFontSelect').addEventListener('change',e=>applyFontSet(e.target.value));
 document.querySelectorAll('[data-open-demo]').forEach(b=>b.addEventListener('click',()=>openDemo(b.dataset.openDemo)));
 document.getElementById('backToVersions').addEventListener('click',()=>showScreen('selection'));
 
